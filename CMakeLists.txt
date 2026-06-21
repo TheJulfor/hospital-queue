@@ -4,4 +4,6 @@ project(hospital_queue)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(hospital_queue
-        main.cpp)
+        main.cpp
+        hospital.cpp
+        hospital.h)
