@@ -33,10 +33,13 @@ int main() {
             std::string name;
             int priority;
             ifile >> name >> priority;
-            hospital.addPatient(name, priority);
+            hospital.push(name, priority);
         }
         else if (command == "-") {
-            hospital.servePatient();
+            if (!hospital.empty()) {
+                std::cout << hospital.top().name << std::endl;
+                hospital.pop();
+            }
         }
     }
 
